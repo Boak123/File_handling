@@ -1,9 +1,8 @@
 def most_frequent_word(filename):
     with open(filename, 'r') as file:
-        file_contents = file.read()
-        word = file_contents.split()
+        file_contents = file.read().split()
         word_count = {}
-        for w in word:
+        for w in file_contents:
             if w in word_count:
                 word_count[w] += 1
             else:
